@@ -1,0 +1,47 @@
+### Health
+GET http://localhost:8080/actuator/health
+
+### Create a router
+POST http://localhost:8080/api/v1/devices
+Content-Type: application/json
+
+{
+  "name": "Core Router",
+  "deviceType": "ROUTER",
+  "manufacturer": "Cisco",
+  "model": "ISR 1000",
+  "ipAddress": "192.168.10.1",
+  "location": "Networking Lab",
+  "status": "ACTIVE",
+  "notes": "Sample data for API testing"
+}
+
+### List all devices
+GET http://localhost:8080/api/v1/devices
+
+### Search devices
+GET http://localhost:8080/api/v1/devices?q=core
+
+### Filter by type and status
+GET http://localhost:8080/api/v1/devices?type=ROUTER&status=ACTIVE
+
+### Get one device (replace 1 with the ID returned by POST)
+GET http://localhost:8080/api/v1/devices/1
+
+### Update a device
+PUT http://localhost:8080/api/v1/devices/1
+Content-Type: application/json
+
+{
+  "name": "Core Router - Updated",
+  "deviceType": "ROUTER",
+  "manufacturer": "Cisco",
+  "model": "ISR 1000",
+  "ipAddress": "192.168.10.1",
+  "location": "CPUT Bellville Lab",
+  "status": "MAINTENANCE",
+  "notes": "Updated sample record"
+}
+
+### Delete a device
+DELETE http://localhost:8080/api/v1/devices/1

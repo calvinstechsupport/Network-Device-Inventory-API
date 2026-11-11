@@ -1,0 +1,10 @@
+{
+  "project": "Network Device Inventory API",
+  "java": "21",
+  "spring_boot": "4.1.2",
+  "springdoc_openapi": "3.2.0",
+  "runtime_build_test_executed": false,
+  "runtime_test_reason": "This container has no Maven installation and cannot resolve external hosts to download Maven/dependencies. Run mvn verify locally or let the included GitHub Actions workflow run after publishing.",
+  "integration_test_cases": 7,
+  "static_check_passes": 3
+}
